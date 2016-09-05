@@ -1,2 +1,2 @@
-# kronos
-Quick App made for the Mac App Store
+# Kronos
+Quick App made for the Mac App Store.
