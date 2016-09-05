@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A304a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="XfG-lQ-9wD">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="Kronos" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Kronos" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About Kronos" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                                <segue destination="0id-IT-TC3" kind="show" id="rfW-XF-7gp"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Hide Kronos" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit Kronos" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Kronos" customModuleProvider="target"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="-8"/>
+        </scene>
+        <!--About Kronos-->
+        <scene sceneID="bsV-Sj-zv5">
+            <objects>
+                <viewController title="About Kronos" id="0id-IT-TC3" sceneMemberID="viewController">
+                    <view key="view" id="fRh-GZ-GIg">
+                        <rect key="frame" x="0.0" y="0.0" width="214" height="243"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mLK-Zk-AZ0">
+                                <rect key="frame" x="80" y="134" width="54" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Kronos" id="6V2-mX-9Yf">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HYU-0M-sfE">
+                                <rect key="frame" x="75" y="159" width="64" height="64"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="Xe8-Rt-MhL"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNA-N2-qkv">
+                                <rect key="frame" x="76" y="120" width="62" height="14"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 1.0" id="ZhR-xH-qcz">
+                                    <font key="font" metaFont="system" size="11"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S9e-vh-smA">
+                                <rect key="frame" x="45" y="7" width="125" height="14"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="© Nikhil D'Souza, 2016" id="wxE-q4-TDg">
+                                    <font key="font" metaFont="system" size="11"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPm-3l-Md5">
+                                <rect key="frame" x="18" y="45" width="178" height="51"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="This app was created because I could not find a free timer with a nice UI." id="rdp-no-oSe">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="Nfy-97-cU7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="522" y="-8.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="Kronos" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="300" height="350"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="305"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
+                    <visualEffectView key="view" appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" id="aKV-0Q-V5j">
+                        <rect key="frame" x="0.0" y="0.0" width="278" height="244"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2fa-O6-OAu">
+                                <rect key="frame" x="33" y="104" width="212" height="95"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="00:00" id="H2i-Zr-5IS">
+                                    <font key="font" metaFont="systemUltraLight" size="80"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="L6Q-Yf-jtp">
+                                <rect key="frame" x="94" y="26" width="91" height="54"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qdG-Gb-RvV" userLabel="Start/Stop Button">
+                                        <rect key="frame" x="-6" y="26" width="103" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Start/Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5H8-Pm-Sxl">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+IA
+</string>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="startStopButtonPressed:" target="XfG-lQ-9wD" id="n1w-66-LbQ"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nTA-8g-zXr">
+                                        <rect key="frame" x="2" y="-7" width="87" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Change" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vJj-Ah-IEt">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="changeButtonPressed:" target="XfG-lQ-9wD" id="R4F-jo-Bu0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="Fpq-lN-saQ"/>
+                                    <constraint firstItem="qdG-Gb-RvV" firstAttribute="leading" secondItem="L6Q-Yf-jtp" secondAttribute="leading" id="ePc-yY-Gpa"/>
+                                    <constraint firstItem="qdG-Gb-RvV" firstAttribute="centerX" secondItem="nTA-8g-zXr" secondAttribute="centerX" id="hUt-Ci-kgT"/>
+                                    <constraint firstAttribute="height" constant="54" id="jVr-bK-0uP"/>
+                                    <constraint firstItem="qdG-Gb-RvV" firstAttribute="top" secondItem="L6Q-Yf-jtp" secondAttribute="top" id="v3c-ot-c34"/>
+                                    <constraint firstItem="nTA-8g-zXr" firstAttribute="top" secondItem="qdG-Gb-RvV" secondAttribute="bottom" constant="12" symbolic="YES" id="wiL-K2-J61"/>
+                                </constraints>
+                            </customView>
+                            <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xne-0A-hAi">
+                                <rect key="frame" x="53" y="80" width="172" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="al0-Pa-np4"/>
+                                    <constraint firstAttribute="width" constant="172" id="uAD-DM-dHU"/>
+                                </constraints>
+                            </customView>
+                            <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nsW-9F-c98">
+                                <rect key="frame" x="53" y="0.0" width="172" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="8Z9-dW-OEI"/>
+                                    <constraint firstAttribute="width" constant="172" id="AHf-Mq-U4n"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="L6Q-Yf-jtp" firstAttribute="top" secondItem="Xne-0A-hAi" secondAttribute="bottom" id="0tf-pL-bNt"/>
+                            <constraint firstItem="2fa-O6-OAu" firstAttribute="centerX" secondItem="aKV-0Q-V5j" secondAttribute="centerX" id="443-nO-z74"/>
+                            <constraint firstItem="nsW-9F-c98" firstAttribute="top" secondItem="L6Q-Yf-jtp" secondAttribute="bottom" id="5gs-2K-M0J"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2fa-O6-OAu" secondAttribute="trailing" constant="35" id="6gJ-Fe-6DP"/>
+                            <constraint firstItem="Xne-0A-hAi" firstAttribute="top" secondItem="2fa-O6-OAu" secondAttribute="bottom" constant="-2" id="Bi3-Jh-pGF"/>
+                            <constraint firstAttribute="bottom" secondItem="nsW-9F-c98" secondAttribute="bottom" id="Duq-Bd-Jie"/>
+                            <constraint firstItem="nsW-9F-c98" firstAttribute="centerX" secondItem="aKV-0Q-V5j" secondAttribute="centerX" id="Onh-Qu-CBD"/>
+                            <constraint firstItem="2fa-O6-OAu" firstAttribute="top" secondItem="aKV-0Q-V5j" secondAttribute="top" constant="45" id="SLQ-EF-TJB"/>
+                            <constraint firstItem="2fa-O6-OAu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aKV-0Q-V5j" secondAttribute="leading" constant="35" id="gDB-0e-WTp"/>
+                            <constraint firstItem="nsW-9F-c98" firstAttribute="height" secondItem="Xne-0A-hAi" secondAttribute="height" id="jTs-lg-aCg"/>
+                            <constraint firstItem="Xne-0A-hAi" firstAttribute="centerX" secondItem="aKV-0Q-V5j" secondAttribute="centerX" id="ngV-jU-Buh"/>
+                            <constraint firstItem="L6Q-Yf-jtp" firstAttribute="centerX" secondItem="aKV-0Q-V5j" secondAttribute="centerX" id="vWC-KC-FdU"/>
+                        </constraints>
+                    </visualEffectView>
+                    <connections>
+                        <outlet property="startButton" destination="qdG-Gb-RvV" id="lBO-DA-EVa"/>
+                        <outlet property="time" destination="2fa-O6-OAu" id="8pQ-1V-EaV"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="763"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSApplicationIcon" width="128" height="128"/>
+    </resources>
+</document>

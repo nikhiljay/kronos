@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		311EB6BD1D7A841F00B45DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311EB6BC1D7A841F00B45DC3 /* AppDelegate.swift */; };
+		311EB6BF1D7A841F00B45DC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311EB6BE1D7A841F00B45DC3 /* ViewController.swift */; };
+		311EB6C11D7A841F00B45DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311EB6C01D7A841F00B45DC3 /* Assets.xcassets */; };
+		311EB6C41D7A841F00B45DC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311EB6C21D7A841F00B45DC3 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		311BA7811D7CAD330092B63F /* Kronos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Kronos.entitlements; sourceTree = "<group>"; };
+		311EB6B91D7A841F00B45DC3 /* Kronos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kronos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		311EB6BC1D7A841F00B45DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		311EB6BE1D7A841F00B45DC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		311EB6C01D7A841F00B45DC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		311EB6C31D7A841F00B45DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		311EB6C51D7A841F00B45DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		311EB6B61D7A841F00B45DC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		311EB6B01D7A841F00B45DC3 = {
+			isa = PBXGroup;
+			children = (
+				311EB6BB1D7A841F00B45DC3 /* Kronos */,
+				311EB6BA1D7A841F00B45DC3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		311EB6BA1D7A841F00B45DC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				311EB6B91D7A841F00B45DC3 /* Kronos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		311EB6BB1D7A841F00B45DC3 /* Kronos */ = {
+			isa = PBXGroup;
+			children = (
+				311BA7811D7CAD330092B63F /* Kronos.entitlements */,
+				311EB6BC1D7A841F00B45DC3 /* AppDelegate.swift */,
+				311EB6BE1D7A841F00B45DC3 /* ViewController.swift */,
+				311EB6C01D7A841F00B45DC3 /* Assets.xcassets */,
+				311EB6C21D7A841F00B45DC3 /* Main.storyboard */,
+				311EB6C51D7A841F00B45DC3 /* Info.plist */,
+			);
+			path = Kronos;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		311EB6B81D7A841F00B45DC3 /* Kronos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 311EB6C81D7A841F00B45DC3 /* Build configuration list for PBXNativeTarget "Kronos" */;
+			buildPhases = (
+				311EB6B51D7A841F00B45DC3 /* Sources */,
+				311EB6B61D7A841F00B45DC3 /* Frameworks */,
+				311EB6B71D7A841F00B45DC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kronos;
+			productName = Kronos;
+			productReference = 311EB6B91D7A841F00B45DC3 /* Kronos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		311EB6B11D7A841F00B45DC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Nikhil D'Souza";
+				TargetAttributes = {
+					311EB6B81D7A841F00B45DC3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 32FG3U99MG;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 311EB6B41D7A841F00B45DC3 /* Build configuration list for PBXProject "Kronos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 311EB6B01D7A841F00B45DC3;
+			productRefGroup = 311EB6BA1D7A841F00B45DC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				311EB6B81D7A841F00B45DC3 /* Kronos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		311EB6B71D7A841F00B45DC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				311EB6C11D7A841F00B45DC3 /* Assets.xcassets in Resources */,
+				311EB6C41D7A841F00B45DC3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		311EB6B51D7A841F00B45DC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				311EB6BF1D7A841F00B45DC3 /* ViewController.swift in Sources */,
+				311EB6BD1D7A841F00B45DC3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		311EB6C21D7A841F00B45DC3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				311EB6C31D7A841F00B45DC3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		311EB6C61D7A841F00B45DC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		311EB6C71D7A841F00B45DC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		311EB6C91D7A841F00B45DC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kronos/Kronos.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Kronos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikhil.Kronos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		311EB6CA1D7A841F00B45DC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kronos/Kronos.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Kronos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikhil.Kronos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		311EB6B41D7A841F00B45DC3 /* Build configuration list for PBXProject "Kronos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				311EB6C61D7A841F00B45DC3 /* Debug */,
+				311EB6C71D7A841F00B45DC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		311EB6C81D7A841F00B45DC3 /* Build configuration list for PBXNativeTarget "Kronos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				311EB6C91D7A841F00B45DC3 /* Debug */,
+				311EB6CA1D7A841F00B45DC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 311EB6B11D7A841F00B45DC3 /* Project object */;
+}
