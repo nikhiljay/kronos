@@ -60,6 +60,31 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Window" id="bbb-je-xAH">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Window" systemMenu="window" id="Jte-3m-Kdf">
+                                    <items>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="I9X-wd-blV">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="UGE-19-xkK"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Zoom" id="oci-M0-LCO">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="performZoom:" target="Ady-hI-5gd" id="bCE-MG-QbG"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="bB4-wa-M8T"/>
+                                        <menuItem title="Bring All to Front" id="Nk6-qj-Tvf">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="mWz-iA-gGl"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
@@ -93,7 +118,7 @@
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNA-N2-qkv">
                                 <rect key="frame" x="76" y="120" width="62" height="14"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 1.1" id="ZhR-xH-qcz">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 1.0" id="ZhR-xH-qcz">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -188,7 +213,7 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXj-Zn-5K6">
                                         <rect key="frame" x="138" y="101" width="120" height="14"/>
                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Ex. &quot;5&quot; for 5 minutes" id="clx-nW-wtd">
-                                            <font key="font" metaFont="system" size="11"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -256,10 +281,10 @@
             </objects>
             <point key="canvasLocation" x="54" y="305"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Kronos-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Kronos" id="XfG-lQ-9wD" customClass="MainViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
                     <visualEffectView key="view" appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" id="aKV-0Q-V5j">
                         <rect key="frame" x="0.0" y="0.0" width="278" height="244"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -276,7 +301,7 @@
                                 <rect key="frame" x="94" y="26" width="91" height="54"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdG-Gb-RvV" userLabel="Start/Stop Button">
-                                        <rect key="frame" x="-12" y="20" width="115" height="42"/>
+                                        <rect key="frame" x="-12" y="20" width="115" height="32"/>
                                         <buttonCell key="cell" type="push" title="Start/Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5H8-Pm-Sxl">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
