@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Kronos
 //
 //  Created by Nikhil D'Souza on 9/2/16.
@@ -8,12 +8,16 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class MainViewController: NSViewController {
     
-    @IBOutlet weak var time: NSTextField!
+    @IBOutlet weak var timeTextField: NSTextField!
+    @IBOutlet var backgroundView: NSVisualEffectView!
+    @IBOutlet weak var startStopButton: NSButton!
+    @IBOutlet weak var changeButton: NSButton!
     var timer: NSTimer = NSTimer()
+    var userDefaults = NSUserDefaults.standardUserDefaults()
     
-    var defaultMinutes: Int = 6
+    var defaultMinutes: Int = 5
     var defaultSeconds: Int = 0
     var minutes: Int = 0
     var seconds: Int = 0
@@ -22,12 +26,37 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appearance: Int? = userDefaults.objectForKey("appearance") as! Int?
+        let time: String? = (userDefaults.objectForKey("time") as! String?)!
+        
+        defaultMinutes = Int(time!)!
+        if appearance == 1 {
+            backgroundView.material = .Light
+            timeTextField.textColor = NSColor.blackColor()
+            titleColor(startStopButton, color: NSColor.whiteColor())
+            titleColor(changeButton, color: NSColor.whiteColor())
+        } else {
+            backgroundView.material = .Dark
+            timeTextField.textColor = NSColor.whiteColor()
+        }
+        
+        backgroundView.state = .Active
+        
         minutes = defaultMinutes
         seconds = defaultSeconds
         displayTime()
         
-        time.editable = false
-        time.bordered = false
+        timeTextField.editable = false
+        timeTextField.bordered = false
+    }
+    
+    func titleColor(button: NSButton, color: NSColor) {
+        let color = NSColor.whiteColor()
+        let colorTitle = NSMutableAttributedString(attributedString: button.attributedTitle)
+        let titleRange = NSMakeRange(0, colorTitle.length)
+        colorTitle.addAttribute(NSForegroundColorAttributeName, value: color, range: titleRange)
+        button.attributedTitle = colorTitle
+        button.attributedTitle = colorTitle
     }
     
     override func viewDidAppear() {
@@ -37,6 +66,18 @@ class ViewController: NSViewController {
         self.view.window?.movableByWindowBackground = true
         self.view.window?.styleMask |= NSFullSizeContentViewWindowMask
         self.view.window?.titleVisibility = .Hidden
+        
+        //float
+        let position: Int? = userDefaults.objectForKey("position") as! Int?
+        if position == 1 {
+            self.view.window?.level = Int(CGWindowLevelForKey(.FloatingWindowLevelKey))
+            self.view.window?.level =  Int(CGWindowLevelForKey(.MaximumWindowLevelKey))
+        }
+        
+        let spaces: Int? = userDefaults.objectForKey("spaces") as! Int?
+        if spaces == 1 {
+            self.view.window?.collectionBehavior = .CanJoinAllSpaces
+        }
     }
 
     @IBAction func startStopButtonPressed(sender: AnyObject) {
@@ -74,7 +115,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func changeButtonPressed(sender: AnyObject) {
-        let newString: String = getString("Change the time", question: "Please enter an your time in minutes as an integer. (Ex. \"5\" would be 5 minutes.)", defaultValue: "")
+        let newString: String = getString("Change the time", question: "Please enter your time in minutes as an integer. (Ex. \"5\" would be 5 minutes.)", defaultValue: "")
         
         if newString != "" {
             let num = Int(newString)
@@ -86,7 +127,7 @@ class ViewController: NSViewController {
                 
                 let updatedMinutes: String = minutes > 9 ? "\(minutes)" : "0\(minutes)"
                 let updatedSeconds: String = seconds > 9 ? "\(seconds)" : "0\(seconds)"
-                time.stringValue = "\(updatedMinutes)" + ":" + "\(updatedSeconds)"
+                timeTextField.stringValue = "\(updatedMinutes)" + ":" + "\(updatedSeconds)"
                 timer.invalidate()
                 state = false
             } else {
@@ -101,7 +142,7 @@ class ViewController: NSViewController {
         if seconds == 60 {
             updatedSeconds = "00"
         }
-        time.stringValue = "\(updatedMinutes)" + ":" + "\(updatedSeconds)"
+        timeTextField.stringValue = "\(updatedMinutes)" + ":" + "\(updatedSeconds)"
     }
     
     func getString(title: String, question: String, defaultValue: String) -> String {

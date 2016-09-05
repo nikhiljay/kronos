@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8EFCA4943236AB145676EDD33B5065EE51AA09ED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8EFCA4943236AB145676EDD33B5065EE51AA09ED" : 0,
+    "915F6E5783A989E7E049979A6A014EA981E79FD7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "78D2CFB8-F16E-484F-85E0-2AA5801EE540",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8EFCA4943236AB145676EDD33B5065EE51AA09ED" : "Kronos\/",
+    "915F6E5783A989E7E049979A6A014EA981E79FD7" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Kronos",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Kronos.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nikhiljay\/kronos.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8EFCA4943236AB145676EDD33B5065EE51AA09ED"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pugi777\/taekare.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "915F6E5783A989E7E049979A6A014EA981E79FD7"
+    }
+  ]
+}

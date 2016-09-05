@@ -23,7 +23,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="1wn-gK-vFs" kind="show" id="Zny-qW-g0z"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -89,8 +93,8 @@
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNA-N2-qkv">
                                 <rect key="frame" x="76" y="120" width="62" height="14"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 1.0" id="ZhR-xH-qcz">
-                                    <font key="font" metaFont="system" size="11"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 1.1" id="ZhR-xH-qcz">
+                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -98,7 +102,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S9e-vh-smA">
                                 <rect key="frame" x="45" y="7" width="125" height="14"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="© Nikhil D'Souza, 2016" id="wxE-q4-TDg">
-                                    <font key="font" metaFont="system" size="11"/>
+                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -118,6 +122,122 @@
             </objects>
             <point key="canvasLocation" x="522" y="-8.5"/>
         </scene>
+        <!--Kronos Preferences-->
+        <scene sceneID="S3H-pA-YdH">
+            <objects>
+                <viewController title="Kronos Preferences" id="1wn-gK-vFs" customClass="PreferencesViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="8y6-DG-MIz">
+                        <rect key="frame" x="0.0" y="0.0" width="276" height="231"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9SI-dq-dZ4">
+                                <rect key="frame" x="10" y="10" width="256" height="211"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gv-8M-dqQ">
+                                        <rect key="frame" x="53" y="172" width="81" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Appearance:" id="zlr-fe-OJV">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-yc-rdg">
+                                        <rect key="frame" x="52" y="121" width="82" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Default Time:" id="CtE-MF-FLK">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ONo-py-Wft">
+                                        <rect key="frame" x="55" y="71" width="79" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Float on Top:" id="TfV-VR-SlO">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aed-ro-sEf">
+                                        <rect key="frame" x="140" y="118" width="96" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="5" drawsBackground="YES" id="5kY-qI-6ly">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <action selector="timeTextFieldChanged:" target="1wn-gK-vFs" id="XhJ-Rq-YoD"/>
+                                        </connections>
+                                    </textField>
+                                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tb1-iG-JmS">
+                                        <rect key="frame" x="138" y="167" width="76" height="26"/>
+                                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="tP9-5u-NSv" id="EBB-wd-Bcz">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" id="mod-X4-BdS">
+                                                <items>
+                                                    <menuItem title="Item 1" state="on" id="tP9-5u-NSv"/>
+                                                    <menuItem title="Item 2" id="iqg-Ze-Su4"/>
+                                                    <menuItem title="Item 3" id="bjG-jH-HDX"/>
+                                                </items>
+                                            </menu>
+                                        </popUpButtonCell>
+                                        <connections>
+                                            <action selector="popUpSelected:" target="1wn-gK-vFs" id="Ky2-Vz-x5R"/>
+                                        </connections>
+                                    </popUpButton>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXj-Zn-5K6">
+                                        <rect key="frame" x="138" y="101" width="120" height="14"/>
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Ex. &quot;5&quot; for 5 minutes" id="clx-nW-wtd">
+                                            <font key="font" metaFont="system" size="11"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zkU-LT-AWm">
+                                        <rect key="frame" x="138" y="70" width="22" height="18"/>
+                                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="6Fv-Du-vrG">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="positionCheckBoxChanged:" target="1wn-gK-vFs" id="tyy-a3-2Kq"/>
+                                        </connections>
+                                    </button>
+                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0D-cQ-v5X">
+                                        <rect key="frame" x="138" y="26" width="22" height="18"/>
+                                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Td4-E4-DeB">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="spacesCheckBoxChanged:" target="1wn-gK-vFs" id="2vZ-4s-W4R"/>
+                                        </connections>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWV-ic-GY8">
+                                        <rect key="frame" x="14" y="27" width="120" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Keep on All Spaces:" id="zYY-6h-tqr">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="AppearancePopUp" destination="tb1-iG-JmS" id="sxy-ek-LJj"/>
+                        <outlet property="appearancePopUp" destination="tb1-iG-JmS" id="OKM-8p-TYH"/>
+                        <outlet property="positionCheckBox" destination="zkU-LT-AWm" id="XbZ-60-BfW"/>
+                        <outlet property="spacesCheckBox" destination="b0D-cQ-v5X" id="2jo-2u-E0y"/>
+                        <outlet property="startupCheckBox" destination="zkU-LT-AWm" id="nga-Gp-l2P"/>
+                        <outlet property="timeTextField" destination="aed-ro-sEf" id="6VQ-H2-JfU"/>
+                    </connections>
+                </viewController>
+                <customObject id="qzi-bP-u74" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447" y="342.5"/>
+        </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
@@ -136,10 +256,10 @@
             </objects>
             <point key="canvasLocation" x="54" y="305"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="Kronos" customModuleProvider="target" sceneMemberID="viewController">
                     <visualEffectView key="view" appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" id="aKV-0Q-V5j">
                         <rect key="frame" x="0.0" y="0.0" width="278" height="244"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -155,8 +275,8 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="L6Q-Yf-jtp">
                                 <rect key="frame" x="94" y="26" width="91" height="54"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qdG-Gb-RvV" userLabel="Start/Stop Button">
-                                        <rect key="frame" x="-6" y="26" width="103" height="32"/>
+                                    <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdG-Gb-RvV" userLabel="Start/Stop Button">
+                                        <rect key="frame" x="-12" y="20" width="115" height="42"/>
                                         <buttonCell key="cell" type="push" title="Start/Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5H8-Pm-Sxl">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -219,8 +339,12 @@ IA
                         </constraints>
                     </visualEffectView>
                     <connections>
+                        <outlet property="backgroundView" destination="aKV-0Q-V5j" id="6Am-e5-JN8"/>
+                        <outlet property="changeButton" destination="nTA-8g-zXr" id="njA-sf-OSV"/>
                         <outlet property="startButton" destination="qdG-Gb-RvV" id="lBO-DA-EVa"/>
+                        <outlet property="startStopButton" destination="qdG-Gb-RvV" id="8pC-DM-McS"/>
                         <outlet property="time" destination="2fa-O6-OAu" id="8pQ-1V-EaV"/>
+                        <outlet property="timeTextField" destination="2fa-O6-OAu" id="1Ej-s6-qKa"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

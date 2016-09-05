@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		311EB6BD1D7A841F00B45DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311EB6BC1D7A841F00B45DC3 /* AppDelegate.swift */; };
-		311EB6BF1D7A841F00B45DC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311EB6BE1D7A841F00B45DC3 /* ViewController.swift */; };
+		311EB6BF1D7A841F00B45DC3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311EB6BE1D7A841F00B45DC3 /* MainViewController.swift */; };
 		311EB6C11D7A841F00B45DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311EB6C01D7A841F00B45DC3 /* Assets.xcassets */; };
 		311EB6C41D7A841F00B45DC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311EB6C21D7A841F00B45DC3 /* Main.storyboard */; };
+		3177F9C91D7CFECE00AEB43A /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3177F9C81D7CFECE00AEB43A /* PreferencesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		311BA7811D7CAD330092B63F /* Kronos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Kronos.entitlements; sourceTree = "<group>"; };
 		311EB6B91D7A841F00B45DC3 /* Kronos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kronos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		311EB6BC1D7A841F00B45DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		311EB6BE1D7A841F00B45DC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		311EB6BE1D7A841F00B45DC3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		311EB6C01D7A841F00B45DC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		311EB6C31D7A841F00B45DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		311EB6C51D7A841F00B45DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3177F9C81D7CFECE00AEB43A /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			children = (
 				311BA7811D7CAD330092B63F /* Kronos.entitlements */,
 				311EB6BC1D7A841F00B45DC3 /* AppDelegate.swift */,
-				311EB6BE1D7A841F00B45DC3 /* ViewController.swift */,
+				311EB6BE1D7A841F00B45DC3 /* MainViewController.swift */,
+				3177F9C81D7CFECE00AEB43A /* PreferencesViewController.swift */,
 				311EB6C01D7A841F00B45DC3 /* Assets.xcassets */,
 				311EB6C21D7A841F00B45DC3 /* Main.storyboard */,
 				311EB6C51D7A841F00B45DC3 /* Info.plist */,
@@ -139,8 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				311EB6BF1D7A841F00B45DC3 /* ViewController.swift in Sources */,
+				311EB6BF1D7A841F00B45DC3 /* MainViewController.swift in Sources */,
 				311EB6BD1D7A841F00B45DC3 /* AppDelegate.swift in Sources */,
+				3177F9C91D7CFECE00AEB43A /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
