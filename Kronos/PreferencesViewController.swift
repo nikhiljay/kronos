@@ -15,51 +15,51 @@ class PreferencesViewController: NSViewController {
     @IBOutlet weak var positionCheckBox: NSButton!
     @IBOutlet weak var spacesCheckBox: NSButton!
     
-    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let userDefaults = UserDefaults.standard
     let appearances: [String] = ["Dark", "Light"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var appearance: Int? = userDefaults.objectForKey("appearance") as! Int?
-        var time: String? = (userDefaults.objectForKey("time") as! String?)!
-        var position: Int? = userDefaults.objectForKey("position") as! Int?
-        var spaces: Int? = userDefaults.objectForKey("spaces") as! Int?
+        var appearance: Int? = userDefaults.object(forKey: "appearance") as! Int?
+        var time: String? = (userDefaults.object(forKey: "time") as! String?)!
+        var position: Int? = userDefaults.object(forKey: "position") as! Int?
+        var spaces: Int? = userDefaults.object(forKey: "spaces") as! Int?
         
         if appearance == nil {
             appearance = 0
-            userDefaults.setObject(appearance, forKey: "appearance")
+            userDefaults.set(appearance, forKey: "appearance")
         }
         
         if time == nil {
             time = "5"
-            userDefaults.setObject(time, forKey: "time")
+            userDefaults.set(time, forKey: "time")
         }
         
         if position == nil {
             position = 0
-            userDefaults.setObject(position, forKey: "position")
+            userDefaults.set(position, forKey: "position")
         }
         
         if spaces == nil {
             spaces = 0
-            userDefaults.setObject(position, forKey: "spaces")
+            userDefaults.set(position, forKey: "spaces")
         }
         
         appearancePopUp.removeAllItems()
-        appearancePopUp.addItemsWithTitles(appearances)
-        appearancePopUp.selectItemAtIndex(appearance!)
+        appearancePopUp.addItems(withTitles: appearances)
+        appearancePopUp.selectItem(at: appearance!)
         timeTextField.stringValue = String(time!)
         positionCheckBox.state = position!
         spacesCheckBox.state = spaces!
     }
     
-    @IBAction func popUpSelected(sender: AnyObject) {
+    @IBAction func popUpSelected(_ sender: AnyObject) {
         print(appearancePopUp.indexOfSelectedItem)
         save()
     }
     
-    @IBAction func timeTextFieldChanged(sender: AnyObject) {
+    @IBAction func timeTextFieldChanged(_ sender: AnyObject) {
         print(timeTextField.stringValue)
         let time = Int(timeTextField.stringValue)
         if time != nil {
@@ -69,12 +69,12 @@ class PreferencesViewController: NSViewController {
         }
     }
     
-    @IBAction func positionCheckBoxChanged(sender: AnyObject) {
+    @IBAction func positionCheckBoxChanged(_ sender: AnyObject) {
         print(positionCheckBox.state)
         save()
     }
     
-    @IBAction func spacesCheckBoxChanged(sender: AnyObject) {
+    @IBAction func spacesCheckBoxChanged(_ sender: AnyObject) {
         print(spacesCheckBox.state)
         save()
     }
@@ -85,19 +85,19 @@ class PreferencesViewController: NSViewController {
         let position = positionCheckBox.state
         let spaces = spacesCheckBox.state
         
-        userDefaults.setObject(appearance, forKey: "appearance")
-        userDefaults.setObject(time, forKey: "time")
-        userDefaults.setObject(position, forKey: "position")
-        userDefaults.setObject(spaces, forKey: "spaces")
+        userDefaults.set(appearance, forKey: "appearance")
+        userDefaults.set(time, forKey: "time")
+        userDefaults.set(position, forKey: "position")
+        userDefaults.set(spaces, forKey: "spaces")
         userDefaults.synchronize()
     }
     
-    func error(question: String, text: String) -> Bool {
+    func error(_ question: String, text: String) -> Bool {
         let msg: NSAlert = NSAlert()
         msg.messageText = question
         msg.informativeText = text
-        msg.alertStyle = NSAlertStyle.WarningAlertStyle
-        msg.addButtonWithTitle("Ok")
+        msg.alertStyle = NSAlertStyle.warning
+        msg.addButton(withTitle: "Ok")
         return msg.runModal() == NSAlertFirstButtonReturn
     }
     

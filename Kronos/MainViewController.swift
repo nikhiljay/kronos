@@ -14,8 +14,8 @@ class MainViewController: NSViewController {
     @IBOutlet var backgroundView: NSVisualEffectView!
     @IBOutlet weak var startStopButton: NSButton!
     @IBOutlet weak var changeButton: NSButton!
-    var timer: NSTimer = NSTimer()
-    var userDefaults = NSUserDefaults.standardUserDefaults()
+    var timer: Timer = Timer()
+    var userDefaults = UserDefaults.standard
     
     var defaultMinutes: Int = 5
     var defaultSeconds: Int = 0
@@ -26,32 +26,32 @@ class MainViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appearance: Int? = userDefaults.objectForKey("appearance") as! Int?
-        let time: String? = (userDefaults.objectForKey("time") as! String?)!
+        let appearance: Int? = userDefaults.object(forKey: "appearance") as! Int?
+        let time: String? = (userDefaults.object(forKey: "time") as! String?)!
         
         defaultMinutes = Int(time!)!
         if appearance == 1 {
-            backgroundView.material = .Light
-            timeTextField.textColor = NSColor.blackColor()
-            titleColor(startStopButton, color: NSColor.whiteColor())
-            titleColor(changeButton, color: NSColor.whiteColor())
+            backgroundView.material = .light
+            timeTextField.textColor = NSColor.black
+            titleColor(startStopButton, color: NSColor.white)
+            titleColor(changeButton, color: NSColor.white)
         } else {
-            backgroundView.material = .Dark
-            timeTextField.textColor = NSColor.whiteColor()
+            backgroundView.material = .dark
+            timeTextField.textColor = NSColor.white
         }
         
-        backgroundView.state = .Active
+        backgroundView.state = .active
         
         minutes = defaultMinutes
         seconds = defaultSeconds
         displayTime()
         
-        timeTextField.editable = false
-        timeTextField.bordered = false
+        timeTextField.isEditable = false
+        timeTextField.isBordered = false
     }
     
-    func titleColor(button: NSButton, color: NSColor) {
-        let color = NSColor.whiteColor()
+    func titleColor(_ button: NSButton, color: NSColor) {
+        let color = NSColor.white
         let colorTitle = NSMutableAttributedString(attributedString: button.attributedTitle)
         let titleRange = NSMakeRange(0, colorTitle.length)
         colorTitle.addAttribute(NSForegroundColorAttributeName, value: color, range: titleRange)
@@ -63,24 +63,24 @@ class MainViewController: NSViewController {
         super.viewDidAppear()
         
         self.view.window?.titlebarAppearsTransparent = true
-        self.view.window?.movableByWindowBackground = true
+        self.view.window?.isMovableByWindowBackground = true
         self.view.window?.styleMask |= NSFullSizeContentViewWindowMask
-        self.view.window?.titleVisibility = .Hidden
+        self.view.window?.titleVisibility = .hidden
         
         //float
-        let position: Int? = userDefaults.objectForKey("position") as! Int?
+        let position: Int? = userDefaults.object(forKey: "position") as! Int?
         if position == 1 {
-            self.view.window?.level = Int(CGWindowLevelForKey(.FloatingWindowLevelKey))
-            self.view.window?.level =  Int(CGWindowLevelForKey(.MaximumWindowLevelKey))
+            self.view.window?.level = Int(CGWindowLevelForKey(.floatingWindow))
+            self.view.window?.level =  Int(CGWindowLevelForKey(.maximumWindow))
         }
         
-        let spaces: Int? = userDefaults.objectForKey("spaces") as! Int?
+        let spaces: Int? = userDefaults.object(forKey: "spaces") as! Int?
         if spaces == 1 {
-            self.view.window?.collectionBehavior = .CanJoinAllSpaces
+            self.view.window?.collectionBehavior = .canJoinAllSpaces
         }
     }
 
-    @IBAction func startStopButtonPressed(sender: AnyObject) {
+    @IBAction func startStopButtonPressed(_ sender: AnyObject) {
         if state == false {
             displayTime()
             
@@ -89,8 +89,8 @@ class MainViewController: NSViewController {
                 seconds = 60
             }
             
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
-            NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
+            RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
             
             state = true
         } else {
@@ -114,7 +114,7 @@ class MainViewController: NSViewController {
         displayTime()
     }
     
-    @IBAction func changeButtonPressed(sender: AnyObject) {
+    @IBAction func changeButtonPressed(_ sender: AnyObject) {
         let newString: String = getString("Change the time", question: "Please enter your time in minutes as an integer. (Ex. \"5\" would be 5 minutes.)", defaultValue: "")
         
         if newString != "" {
@@ -145,10 +145,10 @@ class MainViewController: NSViewController {
         timeTextField.stringValue = "\(updatedMinutes)" + ":" + "\(updatedSeconds)"
     }
     
-    func getString(title: String, question: String, defaultValue: String) -> String {
+    func getString(_ title: String, question: String, defaultValue: String) -> String {
         let msg = NSAlert()
-        msg.addButtonWithTitle("Ok")      // 1st button
-        msg.addButtonWithTitle("Cancel")  // 2nd button
+        msg.addButton(withTitle: "Ok")      // 1st button
+        msg.addButton(withTitle: "Cancel")  // 2nd button
         msg.messageText = title
         msg.informativeText = question
         
@@ -167,12 +167,12 @@ class MainViewController: NSViewController {
         }
     }
     
-    func error(question: String, text: String) -> Bool {
+    func error(_ question: String, text: String) -> Bool {
         let msg: NSAlert = NSAlert()
         msg.messageText = question
         msg.informativeText = text
-        msg.alertStyle = NSAlertStyle.WarningAlertStyle
-        msg.addButtonWithTitle("Ok")
+        msg.alertStyle = NSAlertStyle.warning
+        msg.addButton(withTitle: "Ok")
         return msg.runModal() == NSAlertFirstButtonReturn
     }
     
