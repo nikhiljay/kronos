@@ -64,7 +64,6 @@ class MainViewController: NSViewController {
         
         self.view.window?.titlebarAppearsTransparent = true
         self.view.window?.isMovableByWindowBackground = true
-        self.view.window?.styleMask |= NSFullSizeContentViewWindowMask
         self.view.window?.titleVisibility = .hidden
         
         //float
@@ -131,7 +130,7 @@ class MainViewController: NSViewController {
                 timer.invalidate()
                 state = false
             } else {
-                error("There was a problem.", text: "Make sure you enter an integer. Please try again.")
+//                error("There was a problem.", text: "Make sure you enter an integer. Please try again.")
             }
         }
     }
