@@ -60,7 +60,6 @@ class PreferencesViewController: NSViewController {
     }
     
     @IBAction func timeTextFieldChanged(_ sender: AnyObject) {
-        print(timeTextField.stringValue)
         let time = Int(timeTextField.stringValue)
         if time != nil {
             save()
